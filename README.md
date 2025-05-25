@@ -6,13 +6,12 @@ This project is part of assignment workflows to practice using Git, GitHub, npm,
 
 ## Live Demo
 
-[View Live Site](SocanIcode:workflow-repo-ca:workflow)
+[View Pull Requests on GitHub](SocanIcode:workflow-repo-ca:workflow)
 
 ---
 
 ## Features
 
-- Displays basic information for registration form
 - Uses ESLint and Prettier for clean code
 - Uses environment variables with Vite
 - Deploys automatically with GitHub Actions
@@ -22,11 +21,18 @@ This project is part of assignment workflows to practice using Git, GitHub, npm,
 ## Technologies Used
 
 - HTML, CSS, JavaScript
-- Git & GitHub (branches and pull requests)
+
+- Git & GitHub (branches, commits, pull requests)
+
 - ESLint & Prettier
+
 - Node.js & npm
+
 - Vite
+
 - GitHub Actions
+
+- Vitest & Playwright
 
 ---
 
@@ -34,15 +40,23 @@ This project is part of assignment workflows to practice using Git, GitHub, npm,
 
 ---
 
-- ├── index.html
-- ├── CSS/style.css
-- ├── js/
-- ├── .prettierrc
-- ├── eslint.config.mjs
-- ├── .env
-- ├── package.json
-- ├── README.md
-- └── deploy.yml
+```
+├── index.html
+├── css/
+│ └── style.css
+├── js/
+├── .prettierrc
+├── eslint.config.mjs
+├── .env
+├── .env.example
+├── .gitignore
+├── vitest.config.js
+├── playwright.config.js
+├── package.json
+├── README.md
+├── deploy.yml
+└── tests/
+```
 
 ---
 
@@ -53,13 +67,10 @@ This project is part of assignment workflows to practice using Git, GitHub, npm,
 ### 1. Clone the Respository
 
 First, fork this Repository:
-https://github.com/SocanIcode/Workflow-task-1.git
-
-Then clone your forked vision:
 
 ```bash
-git clone https://github.com/SocanIcode/Workflow-task-1.git
-cd worflow-taks-1
+git clone https://github.com/NoroffFEU/workflow-repo.git
+cd workflow-repo
 ```
 
 ### 2 Install Dependency
@@ -76,7 +87,7 @@ cd worflow-taks-1
 - If using vite
 
 ```bash
-  npm run workflow
+  npm run dev
 ```
 
 ### 4. Linting and Formatting
@@ -84,7 +95,7 @@ cd worflow-taks-1
 Run Eslint
 
 ```bash
-  npm run lint
+npm install --save-dev eslint prettier
 ```
 
 Format using Prettier
@@ -93,24 +104,44 @@ Format using Prettier
    npm run format
 ```
 
+### 5. Install Vitest + Setup
+
+```
+npm install --save-dev vitest
+npm run test
+
+```
+
+### 6. Install playwright + Setup
+
+```
+npm init playwright@latest
+
+```
+
 ---
 
 ## Task Checklist
 
-- [x] Fork GitHub repo
-- [x] Clone to own repo and open in VS Code
-- [x] Initialize npm
-- [x] Install ESLint and configure it
-- [x] Install Prettier, configure it, and run formatting
-- [x] Set up Husky and lint-staged for pre-commit hooks
-- [x] Create config files in package.json for linting/formatting
-- [ ] Fetch and display API data
-- [ ] Create new dev branch
-- [ ] Commit regularly
-- [ ] Push branch and open a pull request
-- [ ] Merge pull request
-- [ ] Use Vite with .env
-- [ ] Set up GitHub Actions deployment
+- [x] Eslint is installed and configured to handle test globals
+
+- [x] Prettier is installed and configured
+
+- [x] Pre-commit hooks have been set up to handle linting and formatting
+
+- [x] Vitest has been installed and configured
+
+- [x] The relevant unit tests have been written and pass
+
+- [x] Playwright has been installed and configured
+
+- [x] The relevant e2e tests have been written and pass
+
+- [x] The README has been updated with the relevant scripts and environment variable examples
+
+- [x] .env is in .gitignore
+
+- [x] There is a .env.example file in the branch
 
 ---
 
