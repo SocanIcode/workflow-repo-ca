@@ -1,10 +1,10 @@
-// vitest.config.js
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
     globals: true,
-    exclude: ["**/node_modules/**", "**/tests/**"],
     environment: "jsdom",
+    include: ["tests/**/*.{test,spec}.js"],
+    exclude: ["node_modules"],
   },
 });
