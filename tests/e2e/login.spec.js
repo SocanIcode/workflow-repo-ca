@@ -41,14 +41,13 @@ test.describe("Login flow", () => {
     await page.route("*/**/holidaze/auth/login", (route) =>
       route.fulfill({
         status: 400,
-        json: { message: "Invalid email or password" },
+        json: { message: "Login failed" },
       }),
     );
 
     await fillLoginForm(page, validEmail, "wrongpassword");
-
     await expect(page.locator("#message-container")).toContainText(
-      "Invalid email or password",
+      "Login failed",
     );
   });
 
